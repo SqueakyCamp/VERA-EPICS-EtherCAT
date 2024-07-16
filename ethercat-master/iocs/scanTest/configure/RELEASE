@@ -25,12 +25,12 @@ TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 #SNCSEQ=$(EPICS_BASE)/../modules/soft/seq
 
 # EPICS_BASE usually appears last so other apps can override stuff:
-ECASYN=$(TOP)/../..
-EPICS_BASE=/dls_sw/epics/R3.14.12.3/base
+ECASYN=/home/htlrennweg/EPICS/ethercat
+EPICS_BASE=/home/htlrennweg/EPICS/epics-base
 
 #IOCBUILDER = /dls_sw/prod/common/python/iocbuilder/3-9
 #PYTHON = dls-python2.6
-ASYN=/dls_sw/prod/R3.14.12.3/support/asyn/4-21
+ASYN=/home/htlrennweg/EPICS/support/asyn
 
 # Set RULES here if you want to take build rules from somewhere
 # other than EPICS_BASE:

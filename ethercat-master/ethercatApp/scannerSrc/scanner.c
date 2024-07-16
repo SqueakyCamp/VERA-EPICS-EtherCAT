@@ -24,7 +24,7 @@
 #include "unpack.h"
 #include "simulation.h"
 #include "version.h"
-#include "liberror.h"
+//#include "liberror.h"
 
 int debug = 1;
 int selftest = 1;
@@ -291,7 +291,7 @@ void cyclic_task(void * usr)
     }
 
     /* suppress errors to stderr */
-    ecrt_err_to_stderr = 0;
+    //ecrt_err_to_stderr = 0;
     while(1)
     {
         rtMessageQueueReceive(scanner->workq, msg, scanner->max_message);
@@ -500,7 +500,8 @@ void cyclic_task(void * usr)
             {
                 if (error_to_console)
                 {
-                    fprintf(stderr,"etherlab library error: %s", ecrt_errstring);
+                    //fprintf(stderr,"etherlab library error: %s", ecrt_errstring);
+		    fprintf(stderr,"etherlab library error: ");
                     error_to_console = FALSE;
                 }
             }

@@ -4,29 +4,38 @@
 # pickled descriptions in this file build_iocbuilder_descriptions.py
 iocbuilder_descriptions = "iocbuilder_descriptions.pkl"
 
+#slaveInfoFiles = [
+#    "Beckhoff EL2xxx.xml",
+#    "Beckhoff EL1xxx.xml",
+#    "Beckhoff EL31xx.xml",
+#    "Beckhoff EK11xx.xml",
+#    "Beckhoff EKM1xxx.xml",
+#    "Beckhoff EL15xx.xml",
+#    "Beckhoff EL25xx.xml",
+#    "Beckhoff EL32xx.xml",
+#    "Beckhoff EL33xx.xml",
+#    "Beckhoff EL3xxx.xml",
+#    "Beckhoff EL37xx.xml",
+#    "Beckhoff EL4xxx.xml",
+#    "Beckhoff EL47xx.xml",
+#    "Beckhoff EL9xxx.xml",
+#    "Beckhoff ELM37xx.xml",
+#    "Beckhoff EP1xxx.xml",
+#    "Beckhoff EP2xxx.xml",
+#    "Beckhoff EP3xxx.xml",
+#    "Beckhoff EP4xxx.xml",
+#    "SMC EX250-SEN1-X156.xml",
+#    "SMC EX260-SECx_V11.xml",
+#    "NI9144.xml"
+#    ]
+
+
 slaveInfoFiles = [
     "Beckhoff EL2xxx.xml",
-    "Beckhoff EL1xxx.xml",
     "Beckhoff EL31xx.xml",
     "Beckhoff EK11xx.xml",
-    "Beckhoff EKM1xxx.xml",
-    "Beckhoff EL15xx.xml",
-    "Beckhoff EL25xx.xml",
-    "Beckhoff EL32xx.xml",
-    "Beckhoff EL33xx.xml",
-    "Beckhoff EL3xxx.xml",
-    "Beckhoff EL37xx.xml",
     "Beckhoff EL4xxx.xml",
-    "Beckhoff EL47xx.xml",
-    "Beckhoff EL9xxx.xml",
-    "Beckhoff ELM37xx.xml",
-    "Beckhoff EP1xxx.xml",
-    "Beckhoff EP2xxx.xml",
-    "Beckhoff EP3xxx.xml",
-    "Beckhoff EP4xxx.xml",
-    "SMC EX250-SEN1-X156.xml",
-    "SMC EX260-SECx_V11.xml",
-    "NI9144.xml"
+    "Beckhoff EL3xxx.xml"
     ]
 
 def build_iocbuilder_descriptions():
@@ -46,8 +55,10 @@ def build_iocbuilder_descriptions():
         etc_dir,'xml'))
     fullpath=os.path.join(builder_dir,iocbuilder_descriptions)
 
-    ModuleVersion('asyn', '4-34')
-    ModuleVersion('busy', '1-7dls1')
+#   ModuleVersion('asyn', '4-34')
+    ModuleVersion('asyn-4-45', '')
+#   ModuleVersion('busy', '1-7dls1')
+    ModuleVersion('busy-1-7-4', '')
     ModuleVersion('ethercat', home=home_dir, use_name=False)
 
     from iocbuilder.modules import ethercat

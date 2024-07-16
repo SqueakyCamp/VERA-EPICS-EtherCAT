@@ -1,4 +1,4 @@
-#!/bin/env dls-python
+#!/bin/env python3
 
 # script to check whether the revisions of a supported device[1]
 # have modified names, by checking the xml description files

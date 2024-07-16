@@ -1,4 +1,4 @@
-#!/bin/env dls-python
+#!/bin/env python3
 #
 # script to list ethercat device types supported at 
 # DLS, filtered according to the entries in 
